@@ -32,7 +32,7 @@ repositories {
         name = 'NeoForged'
         url = 'https://maven.neoforged.net/releases'
     }
-    maven { url 'https://maven.kosmx.dev/' }
+    maven { url 'https://repo.redlance.org/public' }
     maven { url 'https://maven.shedaniel.me/' }
     maven { url 'https://maven.terraformersmc.com/' }
     maven { url 'https://jitpack.io' }
@@ -52,7 +52,7 @@ dependencies {
     shadowBundle project(path: ':common', configuration: 'transformProductionNeoForge')
     shadowBundle(common("com.github.ZsoltMolnarrr:TinyConfig:${project.tiny_config_version}"))
 
-    modImplementation("dev.kosmx.player-anim:player-animation-lib-forge:${project.player_anim_version}")
+    modImplementation "com.zigythebird.playeranim:PlayerAnimationLibNeo:${project.player_anim_version}"
     modApi("me.shedaniel.cloth:cloth-config-neoforge:${project.cloth_config_version}")
 }
 
